@@ -1,6 +1,6 @@
 # Kubeflow On-Premise Deployment
 
-Easily deploy Kubeflow v1.0.1 on exisitng Kubernetes clusters
+Easily deploy Kubeflow v1.0.1 on existing Kubernetes clusters
 
 ## One-Click Deployment
 

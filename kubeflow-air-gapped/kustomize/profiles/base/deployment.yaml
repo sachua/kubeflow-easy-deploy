@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+      - command:
+        - /manager
+        args:
+        - "-userid-header"
+        - $(userid-header)
+        - "-userid-prefix"
+        - $(userid-prefix)
+        - "-workload-identity"
+        - $(gcp-sa)
+        image: $(PRIVATE_REGISTRY)/gcr.io/kubeflow-images-public/profile-controller:v1.0.0-gf3e09203
+        imagePullPolicy: Always
+        name: manager
+        livenessProbe:
+          httpGet:
+            path: /metrics
+            port: 8080
+          initialDelaySeconds: 30
+          periodSeconds: 30
+      - command:
+        - /access-management
+        args:
+        - "-cluster-admin"
+        - $(admin)
+        - "-userid-header"
+        - $(userid-header)
+        - "-userid-prefix"
+        - $(userid-prefix)
+        image: $(PRIVATE_REGISTRY)/gcr.io/kubeflow-images-public/kfam:v1.0.0-ge50a8531
+        imagePullPolicy: Always
+        name: kfam
+        livenessProbe:
+          httpGet:
+            path: /metrics
+            port: 8081
+          initialDelaySeconds: 30
+          periodSeconds: 30
+      serviceAccountName: controller-service-account

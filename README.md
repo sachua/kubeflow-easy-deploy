@@ -52,7 +52,7 @@ Easily deploy Kubeflow v1.0.1 on existing Kubernetes clusters with 1 command.
     python save_images.py
     ```
     
-4. Search and replace `$(PRIVATE_REGISTRY)` in the YAML files in the kustomize directoy to your private Docker registry's URL
+4. Search and replace `$(PRIVATE_REGISTRY)` in the YAML files in the kustomize folder to your private Docker registry's URL
 
 5. Deploy Kubeflow
 

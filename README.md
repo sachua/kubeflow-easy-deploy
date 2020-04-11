@@ -37,7 +37,7 @@ Easily deploy Kubeflow v1.0.1 on existing Kubernetes clusters with 1 command.
     git clone https://github.com/sachua/kubeflow-easy-deploy.git
     ```
     
-2. Run the included python code, following the instructions, to pull the Docker images from public Docker registries and tagging them to your private Docker registry
+2. Run the included python code, following the instructions in the code comments, to pull the Docker images from public Docker registries and tagging them to your private Docker registry
 
     ```
     cd kubeflow-air-gapped
@@ -46,7 +46,7 @@ Easily deploy Kubeflow v1.0.1 on existing Kubernetes clusters with 1 command.
     
 #### While connected to your on-premise air-gapped Kubernetes cluster
 
-3. Run the included python code, following the instructions, to push the Docker images to your private Docker registry
+3. Run the included python code, following the instructions in the code comments, to push the Docker images to your private Docker registry
 
     ```
     python save_images.py

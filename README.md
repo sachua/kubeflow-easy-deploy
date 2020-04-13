@@ -21,7 +21,7 @@ Easily deploy Kubeflow v1.0.1 on existing Kubernetes clusters with 1 command.
     export BASE_DIR=${HOME}
     export KF_DIR=${BASE_DIR}/${KF_NAME}
     cd ${KF_DIR}
-    export PATH=$PATH:"${KF_DIR}/kfctl"
+    export PATH=$PATH:"${KF_DIR}"
     export CONFIG_FILE=${KF_DIR}/kfctl_k8s_istio.v1.0.1.yaml
     kfctl apply -V -f ${CONFIG_FILE}
     ```

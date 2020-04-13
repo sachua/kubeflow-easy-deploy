@@ -353,6 +353,6 @@ spec:
     name: seldon-core-operator
   repos:
   - name: manifests
-    uri: ./kubeflow-manifests-1.0.1.tar.gz
+    uri: ${HOME}/kubeflow-easy-deploy/kubeflow-air-gapped/kubeflow-manifests-1.0.1.tar.gz
   version: v1.0.1
 status: {}

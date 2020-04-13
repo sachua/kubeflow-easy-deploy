@@ -55,7 +55,9 @@ Easily deploy Kubeflow v1.0.1 on existing Kubernetes clusters with 1 command.
     
 4. Search and replace `$(PRIVATE_REGISTRY)` in the YAML files in the kustomize folder to your private Docker registry's URL
 
-5. Deploy Kubeflow
+5. Replace ${HOME} in kfctl_k8s_istio.v1.0.1.yaml repos uri to your `${HOME}` directory
+
+6. Deploy Kubeflow
 
     ```
     export KF_NAME=kubeflow-air-gapped

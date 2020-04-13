@@ -91,7 +91,7 @@ original_image = [
     "seldonio/xgboostserver_rest:0.2",
     "tensorflow/serving:1.14.0",
     "tensorflow/serving:1.14.0-gpu",
-    "tensorflow/serving:latest"
+    "tensorflow/serving:latest",
     "tensorflow/tensorflow:1.8.0",
 ]
 

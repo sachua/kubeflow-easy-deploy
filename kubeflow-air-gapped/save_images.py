@@ -1,7 +1,7 @@
 import os
 
 # Enter your private Docker registry 
-private_registry = 
+private_registry = ""
 
 original_image = [
     "gcr.io/kfserving/kfserving-controller:0.2.2",

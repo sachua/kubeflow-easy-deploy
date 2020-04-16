@@ -53,7 +53,7 @@ Easily deploy Kubeflow v1.0.1 on existing Kubernetes clusters with 1 command.
     python save_images.py
     ```
     
-4. Search and replace `$(PRIVATE_REGISTRY)` in the YAML files in the kustomize folder to your private Docker registry's URL
+4. Search and replace `$(PRIVATE_REGISTRY)` in the YAML files to your private Docker registry's URL
 
 5. Replace ${HOME} in kfctl_k8s_istio.v1.0.1.yaml repos uri to your `${HOME}` directory
 
@@ -103,7 +103,7 @@ kfctl delete -f ${CONFIG_FILE}
     python save_images.py
     ```
     
-4. Search and replace `$(PRIVATE_REGISTRY)` in the YAML files in the kustomize folder to your private Docker registry's URL
+4. Search and replace `$(PRIVATE_REGISTRY)` in the YAML files to your private Docker registry's URL
 
 5. Replace ${HOME} in kfctl_istio_dex.v1.0.1.yaml repos uri to your `${HOME}` directory
 

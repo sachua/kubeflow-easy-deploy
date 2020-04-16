@@ -6,9 +6,16 @@ private_registry = "enter_url_here"
 original_image = [
     "argoproj/argoui:v2.3.0",
     "argoproj/workflow-controller:v2.3.0",
-    "busybox"
-    "docker.io/istio/proxyv2:1.3.1"
+    "busybox",
+    "docker.io/istio/citadel:1.4.3",
+    "docker.io/istio/galley:1.4.3",
+    "docker.io/istio/mixer:1.4.3",
+    "docker.io/istio/pilot:1.4.3",
+    "docker.io/istio/proxyv2:1.4.3"
+    "docker.io/istio/proxyv2:1.3.1",
+    "docker.io/istio/sidecar_injector:1.4.3",
     "docker.io/kubeflowkatib/mxnet-mnist",
+    "docker.io/prom/prometheus:v2.12.0"
     "docker.io/seldonio/seldon-core-operator:1.0.1",
     "gcr.io/kfserving/kfserving-controller:0.2.2",
     "gcr.io/arrikto/dexidp/dex:4bede5eb80822fc3a7fc9edca0ed2605cd339d17",

@@ -5231,7 +5231,7 @@ spec:
         env:
         - name: CITADEL_ENABLE_NAMESPACES_BY_DEFAULT
           value: "true"
-        image: docker.io/istio/citadel:1.4.3
+        image: $(PRIVATE_REGISTRY)/docker.io/istio/citadel:1.4.3
         imagePullPolicy: IfNotPresent
         livenessProbe:
           httpGet:
@@ -5697,7 +5697,7 @@ spec:
         - --monitoringPort=15014
         - --validation-port=9443
         - --log_output_level=default:info
-        image: docker.io/istio/galley:1.4.3
+        image: $(PRIVATE_REGISTRY)/docker.io/istio/galley:1.4.3
         imagePullPolicy: IfNotPresent
         livenessProbe:
           exec:
@@ -5763,7 +5763,7 @@ spec:
               fieldPath: status.podIP
         - name: SDS_ENABLED
           value: "false"
-        image: docker.io/istio/proxyv2:1.4.3
+        image: $(PRIVATE_REGISTRY)/docker.io/istio/proxyv2:1.4.3
         imagePullPolicy: IfNotPresent
         name: istio-proxy
         ports:
@@ -6026,7 +6026,7 @@ spec:
           value: Kubernetes
         - name: SDS_ENABLED
           value: "false"
-        image: docker.io/istio/proxyv2:1.4.3
+        image: $(PRIVATE_REGISTRY)/docker.io/istio/proxyv2:1.4.3
         imagePullPolicy: IfNotPresent
         name: istio-proxy
         ports:
@@ -6379,7 +6379,7 @@ spec:
         - --reconcileWebhookConfig=true
         - --webhookConfigName=istio-sidecar-injector
         - --log_output_level=debug
-        image: docker.io/istio/sidecar_injector:1.4.3
+        image: $(PRIVATE_REGISTRY)/docker.io/istio/sidecar_injector:1.4.3
         imagePullPolicy: IfNotPresent
         livenessProbe:
           exec:
@@ -7453,7 +7453,7 @@ spec:
           value: "true"
         - name: PILOT_ENABLE_PROTOCOL_SNIFFING_FOR_INBOUND
           value: "false"
-        image: docker.io/istio/pilot:1.4.3
+        image: $(PRIVATE_REGISTRY)/docker.io/istio/pilot:1.4.3
         imagePullPolicy: IfNotPresent
         name: discovery
         ports:
@@ -7502,7 +7502,7 @@ spec:
               fieldPath: status.podIP
         - name: SDS_ENABLED
           value: "false"
-        image: docker.io/istio/proxyv2:1.4.3
+        image: $(PRIVATE_REGISTRY)/docker.io/istio/proxyv2:1.4.3
         imagePullPolicy: IfNotPresent
         name: istio-proxy
         ports:
@@ -8106,7 +8106,7 @@ spec:
             fieldRef:
               apiVersion: v1
               fieldPath: metadata.namespace
-        image: docker.io/istio/mixer:1.4.3
+        image: $(PRIVATE_REGISTRY)/docker.io/istio/mixer:1.4.3
         imagePullPolicy: IfNotPresent
         livenessProbe:
           httpGet:
@@ -8160,7 +8160,7 @@ spec:
               fieldPath: status.podIP
         - name: SDS_ENABLED
           value: "false"
-        image: docker.io/istio/proxyv2:1.4.3
+        image: $(PRIVATE_REGISTRY)/docker.io/istio/proxyv2:1.4.3
         imagePullPolicy: IfNotPresent
         name: istio-proxy
         ports:
@@ -8602,7 +8602,7 @@ spec:
       serviceAccountName: prometheus
       containers:
         - name: prometheus
-          image: "docker.io/prom/prometheus:v2.12.0"
+          image: "$(PRIVATE_REGISTRY)/docker.io/prom/prometheus:v2.12.0"
           imagePullPolicy: IfNotPresent
           args:
             - '--storage.tsdb.retention=6h'
@@ -10034,7 +10034,7 @@ spec:
               fieldPath: metadata.namespace
         - name: GOMAXPROCS
           value: "6"
-        image: docker.io/istio/mixer:1.4.3
+        image: $(PRIVATE_REGISTRY)/docker.io/istio/mixer:1.4.3
         imagePullPolicy: IfNotPresent
         livenessProbe:
           httpGet:
@@ -10092,7 +10092,7 @@ spec:
               fieldPath: status.podIP
         - name: SDS_ENABLED
           value: "false"
-        image: docker.io/istio/proxyv2:1.4.3
+        image: $(PRIVATE_REGISTRY)/docker.io/istio/proxyv2:1.4.3
         imagePullPolicy: IfNotPresent
         name: istio-proxy
         ports:

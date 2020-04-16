@@ -124,7 +124,7 @@ kfctl delete -f ${CONFIG_FILE}
 
 - Default credentials are:
 
-    ```bash
+    ```ldif
     Username: admin@kubeflow.org
     Password: 12341234
     ```

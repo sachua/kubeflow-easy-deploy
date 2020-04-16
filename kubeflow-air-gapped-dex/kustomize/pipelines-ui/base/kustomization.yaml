@@ -11,9 +11,9 @@ configMapGenerator:
 - name: ui-parameters
   env: params.env
 images:
-- name: $(PRIVATE_REPOSITORY)/gcr.io/ml-pipeline/frontend
+- name: $(PRIVATE_REGISTRY)/gcr.io/ml-pipeline/frontend
   newTag: 0.2.0
-  newName: $(PRIVATE_REPOSITORY)/gcr.io/ml-pipeline/frontend
+  newName: $(PRIVATE_REGISTRY)/gcr.io/ml-pipeline/frontend
 vars:
 - name: ui-namespace
   objref:

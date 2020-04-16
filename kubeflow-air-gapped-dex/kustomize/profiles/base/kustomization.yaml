@@ -15,11 +15,11 @@ configMapGenerator:
   - params.env
   name: profiles-parameters
 images:
-- name: $(PRIVATE_REPOSITORY)/gcr.io/kubeflow-images-public/kfam
-  newName: $(PRIVATE_REPOSITORY)/gcr.io/kubeflow-images-public/kfam
+- name: $(PRIVATE_REGISTRY)/gcr.io/kubeflow-images-public/kfam
+  newName: $(PRIVATE_REGISTRY)/gcr.io/kubeflow-images-public/kfam
   newTag: v1.0.0-gf3e09203
-- name: $(PRIVATE_REPOSITORY)/gcr.io/kubeflow-images-public/profile-controller
-  newName: $(PRIVATE_REPOSITORY)/gcr.io/kubeflow-images-public/profile-controller
+- name: $(PRIVATE_REGISTRY)/gcr.io/kubeflow-images-public/profile-controller
+  newName: $(PRIVATE_REGISTRY)/gcr.io/kubeflow-images-public/profile-controller
   newTag: v1.0.0-ge50a8531
 vars:
 - fieldref:

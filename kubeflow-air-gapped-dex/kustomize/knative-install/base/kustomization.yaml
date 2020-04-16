@@ -19,21 +19,21 @@ resources:
 commonLabels:
   kustomize.component: knative
 images:
-- name: $(PRIVATE_REPOSITORY)/gcr.io/knative-releases/knative.dev/serving/cmd/activator
-  newName: $(PRIVATE_REPOSITORY)/gcr.io/knative-releases/knative.dev/serving/cmd/activator
+- name: $(PRIVATE_REGISTRY)/gcr.io/knative-releases/knative.dev/serving/cmd/activator
+  newName: $(PRIVATE_REGISTRY)/gcr.io/knative-releases/knative.dev/serving/cmd/activator
   newTag: v0.11.1
-- name: $(PRIVATE_REPOSITORY)/gcr.io/knative-releases/knative.dev/serving/cmd/autoscaler-hpa
-  newName: $(PRIVATE_REPOSITORY)/gcr.io/knative-releases/knative.dev/serving/cmd/autoscaler-hpa
+- name: $(PRIVATE_REGISTRY)/gcr.io/knative-releases/knative.dev/serving/cmd/autoscaler-hpa
+  newName: $(PRIVATE_REGISTRY)/gcr.io/knative-releases/knative.dev/serving/cmd/autoscaler-hpa
   newTag: v0.11.1
-- name: $(PRIVATE_REPOSITORY)/gcr.io/knative-releases/knative.dev/serving/cmd/autoscaler
-  newName: $(PRIVATE_REPOSITORY)/gcr.io/knative-releases/knative.dev/serving/cmd/autoscaler
+- name: $(PRIVATE_REGISTRY)/gcr.io/knative-releases/knative.dev/serving/cmd/autoscaler
+  newName: $(PRIVATE_REGISTRY)/gcr.io/knative-releases/knative.dev/serving/cmd/autoscaler
   newTag: v0.11.1
-- name: $(PRIVATE_REPOSITORY)/gcr.io/knative-releases/knative.dev/serving/cmd/networking/istio
-  newName: $(PRIVATE_REPOSITORY)/gcr.io/knative-releases/knative.dev/serving/cmd/networking/istio
+- name: $(PRIVATE_REGISTRY)/gcr.io/knative-releases/knative.dev/serving/cmd/networking/istio
+  newName: $(PRIVATE_REGISTRY)/gcr.io/knative-releases/knative.dev/serving/cmd/networking/istio
   newTag: v0.11.1
-- name: $(PRIVATE_REPOSITORY)/gcr.io/knative-releases/knative.dev/serving/cmd/webhook
-  newName: $(PRIVATE_REPOSITORY)/gcr.io/knative-releases/knative.dev/serving/cmd/webhook
+- name: $(PRIVATE_REGISTRY)/gcr.io/knative-releases/knative.dev/serving/cmd/webhook
+  newName: $(PRIVATE_REGISTRY)/gcr.io/knative-releases/knative.dev/serving/cmd/webhook
   newTag: v0.11.1
-- name: $(PRIVATE_REPOSITORY)/gcr.io/knative-releases/knative.dev/serving/cmd/controller
-  newName: $(PRIVATE_REPOSITORY)/gcr.io/knative-releases/knative.dev/serving/cmd/controller
+- name: $(PRIVATE_REGISTRY)/gcr.io/knative-releases/knative.dev/serving/cmd/controller
+  newName: $(PRIVATE_REGISTRY)/gcr.io/knative-releases/knative.dev/serving/cmd/controller
   newTag: v0.11.1

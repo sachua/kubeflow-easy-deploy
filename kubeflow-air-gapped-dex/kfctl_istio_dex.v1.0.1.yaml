@@ -1,6 +1,9 @@
 apiVersion: kfdef.apps.kubeflow.org/v1
 kind: KfDef
 metadata:
+  clusterName: docker-desktop
+  creationTimestamp: null
+  name: kubeflow-easy-deploy
   namespace: kubeflow
 spec:
   applications:
@@ -22,28 +25,12 @@ spec:
         value: istio-system
       repoRef:
         name: manifests
-        path: istio-1-3-1/istio-crds-1-3-1
-    name: istio-crds
-  - kustomizeConfig:
-      parameters:
-      - name: namespace
-        value: istio-system
-      repoRef:
-        name: manifests
-        path: istio-1-3-1/istio-install-1-3-1
-    name: istio-install
-  - kustomizeConfig:
-      parameters:
-      - name: namespace
-        value: istio-system
-      repoRef:
-        name: manifests
         path: istio-1-3-1/cluster-local-gateway-1-3-1
     name: cluster-local-gateway
   - kustomizeConfig:
       parameters:
       - name: clusterRbacConfig
-        value: 'ON'
+        value: "OFF"
       repoRef:
         name: manifests
         path: istio/istio
@@ -239,7 +226,7 @@ spec:
       - name: usageId
         value: <randomly-generated-id>
       - name: reportUsage
-        value: 'true'
+        value: "true"
       repoRef:
         name: manifests
         path: common/spartakus
@@ -370,5 +357,9 @@ spec:
     name: seldon-core-operator
   repos:
   - name: manifests
-    uri: https://github.com/sachua/kubeflow-manifests/archive/v1.0.1.tar.gz
-  version: v1.0.1
+    uri: https://github.com/sachua/kubeflow-manifests/archive/master.tar.gz
+  version: master
+status:
+  reposCache:
+  - localPath: '".cache/manifests/kubeflow-manifests-master"'
+    name: manifests

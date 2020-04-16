@@ -16,7 +16,7 @@ spec:
         - $(userid-prefix)
         - "-workload-identity"
         - $(gcp-sa)
-        image: $(PRIVATE_REGISTRY)/gcr.io/kubeflow-images-public/profile-controller:v1.0.0-gf3e09203
+        image: $(PRIVATE_REGISTRY)/gcr.io/kubeflow-images-public/profile-controller:v1.0.0-ge50a8531
         imagePullPolicy: Always
         name: manager
         livenessProbe:
@@ -34,7 +34,7 @@ spec:
         - $(userid-header)
         - "-userid-prefix"
         - $(userid-prefix)
-        image: $(PRIVATE_REGISTRY)/gcr.io/kubeflow-images-public/kfam:v1.0.0-ge50a8531
+        image: $(PRIVATE_REGISTRY)/gcr.io/kubeflow-images-public/kfam:v1.0.0-gf3e09203
         imagePullPolicy: Always
         name: kfam
         livenessProbe:

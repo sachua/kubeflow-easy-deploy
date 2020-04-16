@@ -11,6 +11,6 @@ resources:
 - role.yaml
 - service-account.yaml
 images:
-- name: $(PRIVATE_REPOSITORY)/gcr.io/ml-pipeline/scheduledworkflow
+- name: $(PRIVATE_REGISTRY)/gcr.io/ml-pipeline/scheduledworkflow
   newTag: 0.2.0
-  newName: $(PRIVATE_REPOSITORY)/gcr.io/ml-pipeline/scheduledworkflow
+  newName: $(PRIVATE_REGISTRY)/gcr.io/ml-pipeline/scheduledworkflow

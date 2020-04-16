@@ -10,12 +10,12 @@ commonLabels:
 # Images modify the tags for images without
 # creating patches.
 images:
-- name: $(PRIVATE_REPOSITORY)/gcr.io/spark-operator/spark-operator
+- name: $(PRIVATE_REGISTRY)/gcr.io/spark-operator/spark-operator
   newTag: v1beta2-1.0.0-2.4.4
 
 # Value of this field is prepended to the
 # names of all resources
-  newName: $(PRIVATE_REPOSITORY)/gcr.io/spark-operator/spark-operator
+  newName: $(PRIVATE_REGISTRY)/gcr.io/spark-operator/spark-operator
 namePrefix: spark-operator
 
 # List of resource files that kustomize reads, modifies

@@ -10,6 +10,6 @@ resources:
 commonLabels:
   kustomize.component: tf-job-operator
 images:
-- name: $(PRIVATE_REPOSITORY)/gcr.io/kubeflow-images-public/tf_operator
-  newName: $(PRIVATE_REPOSITORY)/gcr.io/kubeflow-images-public/tf_operator
+- name: $(PRIVATE_REGISTRY)/gcr.io/kubeflow-images-public/tf_operator
+  newName: $(PRIVATE_REGISTRY)/gcr.io/kubeflow-images-public/tf_operator
   newTag: v1.0.0-g92389064

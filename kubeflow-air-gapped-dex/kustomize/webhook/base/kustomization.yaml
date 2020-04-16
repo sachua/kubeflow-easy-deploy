@@ -13,8 +13,8 @@ commonLabels:
   kustomize.component: admission-webhook
 namePrefix: admission-webhook-
 images:
-- name: $(PRIVATE_REPOSITORY)/gcr.io/kubeflow-images-public/admission-webhook
-  newName: $(PRIVATE_REPOSITORY)/gcr.io/kubeflow-images-public/admission-webhook
+- name: $(PRIVATE_REGISTRY)/gcr.io/kubeflow-images-public/admission-webhook
+  newName: $(PRIVATE_REGISTRY)/gcr.io/kubeflow-images-public/admission-webhook
   newTag: v1.0.0-gaf96e4e3
 namespace: kubeflow
 configMapGenerator:

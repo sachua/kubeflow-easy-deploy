@@ -82,6 +82,6 @@ vars:
 configurations:
 - params.yaml
 images:
-- name: $(PRIVATE_REPOSITORY)/gcr.io/arrikto/kubeflow/oidc-authservice
-  newName: $(PRIVATE_REPOSITORY)/gcr.io/arrikto/kubeflow/oidc-authservice
+- name: $(PRIVATE_REGISTRY)/gcr.io/arrikto/kubeflow/oidc-authservice
+  newName: $(PRIVATE_REGISTRY)/gcr.io/arrikto/kubeflow/oidc-authservice
   newTag: 28c59ef

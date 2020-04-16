@@ -3,6 +3,6 @@ kind: Kustomization
 bases:
 - ../../base
 images:
-  - name: $(PRIVATE_REPOSITORY)/mysql
+  - name: $(PRIVATE_REGISTRY)/mysql
     newTag: "5.6"
-    newName: $(PRIVATE_REPOSITORY)/mysql
+    newName: $(PRIVATE_REGISTRY)/mysql

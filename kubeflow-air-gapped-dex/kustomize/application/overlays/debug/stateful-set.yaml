@@ -10,7 +10,7 @@ spec:
     spec:
       containers:
       - name: manager
-        image: gcr.io/$(project)/application-controller:latest
+        image: $(PRIVATE_REGISTRY)/gcr.io/$(project)/application-controller:latest
         command:
         - /go/bin/dlv
         args:

@@ -20,6 +20,6 @@ vars:
 configurations:
 - params.yaml
 images:
-- name: $(PRIVATE_REPOSITORY)/gcr.io/$(project)/profile-controller
-  newName: $(PRIVATE_REPOSITORY)/gcr.io/$(project)/profile-controller
+- name: $(PRIVATE_REGISTRY)/gcr.io/$(project)/profile-controller
+  newName: $(PRIVATE_REGISTRY)/gcr.io/$(project)/profile-controller
   newTag: latest

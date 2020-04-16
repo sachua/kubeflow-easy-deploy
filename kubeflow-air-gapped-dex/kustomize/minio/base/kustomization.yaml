@@ -21,8 +21,8 @@ vars:
   fieldref:
     fieldpath: data.minioPvcName
 images:
-- name: $(PRIVATE_REPOSITORY)/minio/minio
+- name: $(PRIVATE_REGISTRY)/minio/minio
   newTag: RELEASE.2018-02-09T22-40-05Z
-  newName: $(PRIVATE_REPOSITORY)/minio/minio
+  newName: $(PRIVATE_REGISTRY)/minio/minio
 configurations:
 - params.yaml

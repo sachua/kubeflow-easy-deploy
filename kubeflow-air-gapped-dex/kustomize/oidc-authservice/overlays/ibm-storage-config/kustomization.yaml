@@ -5,6 +5,6 @@ bases:
 patchesStrategicMerge:
 - statefulset.yaml
 images:
-  - name: $(PRIVATE_REPOSITORY)/busybox
+  - name: $(PRIVATE_REGISTRY)/busybox
     newTag: "latest"
-    newName: $(PRIVATE_REPOSITORY)/busybox
+    newName: $(PRIVATE_REGISTRY)/busybox

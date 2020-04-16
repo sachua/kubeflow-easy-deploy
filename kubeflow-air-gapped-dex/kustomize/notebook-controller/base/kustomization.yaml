@@ -13,8 +13,8 @@ commonLabels:
   app: notebook-controller
   kustomize.component: notebook-controller
 images:
-- name: $(PRIVATE_REPOSITORY)/gcr.io/kubeflow-images-public/notebook-controller
-  newName: $(PRIVATE_REPOSITORY)/gcr.io/kubeflow-images-public/notebook-controller
+- name: $(PRIVATE_REGISTRY)/gcr.io/kubeflow-images-public/notebook-controller
+  newName: $(PRIVATE_REGISTRY)/gcr.io/kubeflow-images-public/notebook-controller
   newTag: v1.0.0-gcd65ce25
 configMapGenerator:
 - envs:

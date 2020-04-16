@@ -11,11 +11,11 @@ resources:
 commonLabels:
   kustomize.component: argo
 images:
-- name: $(PRIVATE_REPOSITORY)/argoproj/argoui
-  newName: $(PRIVATE_REPOSITORY)/argoproj/argoui
+- name: $(PRIVATE_REGISTRY)/argoproj/argoui
+  newName: $(PRIVATE_REGISTRY)/argoproj/argoui
   newTag: v2.3.0
-- name: $(PRIVATE_REPOSITORY)/argoproj/workflow-controller
-  newName: $(PRIVATE_REPOSITORY)/argoproj/workflow-controller
+- name: $(PRIVATE_REGISTRY)/argoproj/workflow-controller
+  newName: $(PRIVATE_REGISTRY)/argoproj/workflow-controller
   newTag: v2.3.0
 configMapGenerator:
 - name: workflow-controller-parameters

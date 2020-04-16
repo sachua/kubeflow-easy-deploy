@@ -7,20 +7,8 @@ original_image = [
     "argoproj/argoui:v2.3.0",
     "argoproj/workflow-controller:v2.3.0",
     "busybox"
-    "gcr.io/istio-release/citadel:release-1.3-latest-daily",
-    "gcr.io/istio-release/galley:release-1.3-latest-daily",
-    "gcr.io/istio-release/kubectl:release-1.3-latest-daily",
-    "gcr.io/istio-release/mixer:release-1.3-latest-daily",
-    "gcr.io/istio-release/node-agent-k8s:release-1.3-latest-daily",
-    "gcr.io/istio-release/pilot:release-1.3-latest-daily",
-    "gcr.io/istio-release/proxy_init:release-1.3-latest-daily",
-    "gcr.io/istio-release/proxyv2:release-1.3-latest-daily",
-    "gcr.io/istio-release/sidecar_injector:release-1.3-latest-daily",
     "docker.io/istio/proxyv2:1.3.1"
-    "docker.io/jaegertracing/all-in-one:1.9",
-    "docker.io/kiali/kiali:v0.16",
     "docker.io/kubeflowkatib/mxnet-mnist",
-    "docker.io/prom/prometheus:v2.8.0",
     "docker.io/seldonio/seldon-core-operator:1.0.1",
     "gcr.io/kfserving/kfserving-controller:0.2.2",
     "gcr.io/arrikto/kubeflow/oidc-authservice:6ac9400",
@@ -53,12 +41,12 @@ original_image = [
     "gcr.io/kubeflow-images-public/katib/v1alpha3/suggestion-nasrl:v0.8.0",
     "gcr.io/kubeflow-images-public/katib/v1alpha3/suggestion-skopt:v0.8.0",
     "gcr.io/kubeflow-images-public/katib/v1alpha3/tfevent-metrics-collector:v0.8.0",
-    "gcr.io/kubeflow-images-public/kfam:v1.0.0-ge50a8531",
+    "gcr.io/kubeflow-images-public/kfam:v1.0.0-gf3e09203",
     "gcr.io/kubeflow-images-public/kubernetes-sigs/application:1.0-beta",
     "gcr.io/kubeflow-images-public/metadata-frontend:v0.1.8",
     "gcr.io/kubeflow-images-public/metadata:v0.1.11",
     "gcr.io/kubeflow-images-public/notebook-controller:v1.0.0-gcd65ce25",
-    "gcr.io/kubeflow-images-public/profile-controller:v1.0.0-gf3e09203",
+    "gcr.io/kubeflow-images-public/profile-controller:v1.0.0-ge50a8531",
     "gcr.io/kubeflow-images-public/pytorch-operator:v1.0.0-g047cf0f",
     "gcr.io/kubeflow-images-public/tf_operator:v1.0.0-g92389064",
     "gcr.io/kubeflow-images-public/tensorflow-1.15.2-notebook-cpu:1.0.0",
@@ -74,7 +62,6 @@ original_image = [
     "gcr.io/ml-pipeline/visualization-server:0.2.0",
     "gcr.io/spark-operator/spark-operator:v1beta2-1.0.0-2.4.4",
     "gcr.io/tfx-oss-public/ml_metadata_store_server:v0.21.1",
-    "grafana/grafana:6.0.2",
     "mcr.microsoft.com/onnxruntime/server:v0.5.1",
     "metacontroller/metacontroller:v0.3.0",
     "minio/minio:RELEASE.2018-02-09T22-40-05Z",
@@ -97,8 +84,7 @@ original_image = [
     "tensorflow/serving:1.14.0",
     "tensorflow/serving:1.14.0-gpu",
     "tensorflow/serving:latest",
-    "tensorflow/tensorflow:1.8.0",
-    "ubuntu:xenial"
+    "tensorflow/tensorflow:1.8.0"
 ]
 
 # Uncomment when pulling and tagging of images(while connected to Internet)

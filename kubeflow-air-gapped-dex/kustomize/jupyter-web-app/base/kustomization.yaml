@@ -15,8 +15,8 @@ commonLabels:
   app: jupyter-web-app
   kustomize.component: jupyter-web-app
 images:
-- name: $(PRIVATE_REPOSITORY)/gcr.io/kubeflow-images-public/jupyter-web-app
-  newName: $(PRIVATE_REPOSITORY)/gcr.io/kubeflow-images-public/jupyter-web-app
+- name: $(PRIVATE_REGISTRY)/gcr.io/kubeflow-images-public/jupyter-web-app
+  newName: $(PRIVATE_REGISTRY)/gcr.io/kubeflow-images-public/jupyter-web-app
   newTag: v1.0.0-g2bd63238
 configMapGenerator:
 - envs:

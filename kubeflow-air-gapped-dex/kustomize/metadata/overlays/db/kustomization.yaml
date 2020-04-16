@@ -21,8 +21,8 @@ resources:
 patchesStrategicMerge:
 - metadata-deployment.yaml
 images:
-- name: $(PRIVATE_REPOSITORY)/mysql
-  newName: $(PRIVATE_REPOSITORY)/mysql
+- name: $(PRIVATE_REGISTRY)/mysql
+  newName: $(PRIVATE_REGISTRY)/mysql
   newTag: 8.0.3
 vars:
 - name: metadata-db-service

@@ -27,6 +27,6 @@ vars:
 configurations:
 - params.yaml
 images:
-- name: $(PRIVATE_REPOSITORY)/tensorflow/tensorflow
-  newName: $(PRIVATE_REPOSITORY)/tensorflow/tensorflow
+- name: $(PRIVATE_REGISTRY)/tensorflow/tensorflow
+  newName: $(PRIVATE_REGISTRY)/tensorflow/tensorflow
   newTag: 1.8.0

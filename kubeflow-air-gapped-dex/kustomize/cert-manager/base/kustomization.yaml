@@ -14,14 +14,14 @@ resources:
 commonLabels:
   kustomize.component: cert-manager
 images:
-- name: $(PRIVATE_REPOSITORY)/quay.io/jetstack/cert-manager-controller
-  newName: $(PRIVATE_REPOSITORY)/quay.io/jetstack/cert-manager-controller
+- name: $(PRIVATE_REGISTRY)/quay.io/jetstack/cert-manager-controller
+  newName: $(PRIVATE_REGISTRY)/quay.io/jetstack/cert-manager-controller
   newTag: v0.11.0
-- name: $(PRIVATE_REPOSITORY)/quay.io/jetstack/cert-manager-webhook
-  newName: $(PRIVATE_REPOSITORY)/quay.io/jetstack/cert-manager-webhook
+- name: $(PRIVATE_REGISTRY)/quay.io/jetstack/cert-manager-webhook
+  newName: $(PRIVATE_REGISTRY)/quay.io/jetstack/cert-manager-webhook
   newTag: v0.11.0
-- name: $(PRIVATE_REPOSITORY)/quay.io/jetstack/cert-manager-cainjector
-  newName: $(PRIVATE_REPOSITORY)/quay.io/jetstack/cert-manager-cainjector
+- name: $(PRIVATE_REGISTRY)/quay.io/jetstack/cert-manager-cainjector
+  newName: $(PRIVATE_REGISTRY)/quay.io/jetstack/cert-manager-cainjector
   newTag: v0.11.0
 configMapGenerator:
 - name: cert-manager-parameters

@@ -8,8 +8,8 @@ resources:
 commonLabels:
   kustomize.component: spartakus
 images:
-- name: $(PRIVATE_REPOSITORY)/gcr.io/google_containers/spartakus-amd64
-  newName: $(PRIVATE_REPOSITORY)/gcr.io/google_containers/spartakus-amd64
+- name: $(PRIVATE_REGISTRY)/gcr.io/google_containers/spartakus-amd64
+  newName: $(PRIVATE_REGISTRY)/gcr.io/google_containers/spartakus-amd64
   newTag: v1.1.0
 configMapGenerator:
 - name: spartakus-parameters

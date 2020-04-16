@@ -79,6 +79,6 @@ vars:
 configurations:
 - params.yaml
 images:
-- name: $(PRIVATE_REPOSITORY)/quay.io/coreos/dex
-  newName: $(PRIVATE_REPOSITORY)/gcr.io/arrikto/dexidp/dex
+- name: $(PRIVATE_REGISTRY)/gcr.io/arrikto/dexidp/dex
+  newName: $(PRIVATE_REGISTRY)/gcr.io/arrikto/dexidp/dex
   newTag: 4bede5eb80822fc3a7fc9edca0ed2605cd339d17

@@ -49,18 +49,18 @@ vars:
   fieldref:
     fieldpath: metadata.name
 images:
-- name: $(PRIVATE_REPOSITORY)/gcr.io/kubeflow-images-public/metadata
-  newName: $(PRIVATE_REPOSITORY)/gcr.io/kubeflow-images-public/metadata
+- name: $(PRIVATE_REGISTRY)/gcr.io/kubeflow-images-public/metadata
+  newName: $(PRIVATE_REGISTRY)/gcr.io/kubeflow-images-public/metadata
   newTag: v0.1.11
-- name: $(PRIVATE_REPOSITORY)/gcr.io/tfx-oss-public/ml_metadata_store_server
-  newName: $(PRIVATE_REPOSITORY)/gcr.io/tfx-oss-public/ml_metadata_store_server
+- name: $(PRIVATE_REGISTRY)/gcr.io/tfx-oss-public/ml_metadata_store_server
+  newName: $(PRIVATE_REGISTRY)/gcr.io/tfx-oss-public/ml_metadata_store_server
   newTag: v0.21.1
-- name: $(PRIVATE_REPOSITORY)/gcr.io/ml-pipeline/envoy
-  newName: $(PRIVATE_REPOSITORY)/gcr.io/ml-pipeline/envoy
+- name: $(PRIVATE_REGISTRY)/gcr.io/ml-pipeline/envoy
+  newName: $(PRIVATE_REGISTRY)/gcr.io/ml-pipeline/envoy
   newTag: metadata-grpc
-- name: $(PRIVATE_REPOSITORY)/mysql
-  newName: $(PRIVATE_REPOSITORY)/mysql
+- name: $(PRIVATE_REGISTRY)/mysql
+  newName: $(PRIVATE_REGISTRY)/mysql
   newTag: 8.0.3
-- name: $(PRIVATE_REPOSITORY)/gcr.io/kubeflow-images-public/metadata-frontend
-  newName: $(PRIVATE_REPOSITORY)/gcr.io/kubeflow-images-public/metadata-frontend
+- name: $(PRIVATE_REGISTRY)/gcr.io/kubeflow-images-public/metadata-frontend
+  newName: $(PRIVATE_REGISTRY)/gcr.io/kubeflow-images-public/metadata-frontend
   newTag: v0.1.8

@@ -14,8 +14,8 @@ configMapGenerator:
 generatorOptions:
   disableNameSuffixHash: true
 images:
-- name: $(PRIVATE_REPOSITORY)/gcr.io/kubeflow-images-public/kubernetes-sigs/application
-  newName: $(PRIVATE_REPOSITORY)/gcr.io/kubeflow-images-public/kubernetes-sigs/application
+- name: $(PRIVATE_REGISTRY)/gcr.io/kubeflow-images-public/kubernetes-sigs/application
+  newName: $(PRIVATE_REGISTRY)/gcr.io/kubeflow-images-public/kubernetes-sigs/application
   newTag: 1.0-beta
 vars:
 - name: project

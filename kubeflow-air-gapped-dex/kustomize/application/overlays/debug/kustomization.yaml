@@ -5,6 +5,6 @@ bases:
 patchesStrategicMerge:
 - stateful-set.yaml
 images:
-- name: $(PRIVATE_REPOSITORY)/gcr.io/$(project)/application-controller
-  newName: $(PRIVATE_REPOSITORY)/gcr.io/$(project)/application-controller
+- name: $(PRIVATE_REGISTRY)/gcr.io/$(project)/application-controller
+  newName: $(PRIVATE_REGISTRY)/gcr.io/$(project)/application-controller
   newTag: latest

@@ -9,6 +9,6 @@ resources:
 - deployment.yaml
 - service-account.yaml
 images:
-- name: $(PRIVATE_REPOSITORY)/gcr.io/ml-pipeline/persistenceagent
+- name: $(PRIVATE_REGISTRY)/gcr.io/ml-pipeline/persistenceagent
   newTag: 0.2.0
-  newName: $(PRIVATE_REPOSITORY)/gcr.io/ml-pipeline/persistenceagent
+  newName: $(PRIVATE_REGISTRY)/gcr.io/ml-pipeline/persistenceagent

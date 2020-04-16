@@ -357,9 +357,5 @@ spec:
     name: seldon-core-operator
   repos:
   - name: manifests
-    uri: https://github.com/sachua/kubeflow-manifests/archive/master.tar.gz
+    uri: ${HOME}/kubeflow-easy-deploy/kubeflow-air-gapped-dex/master.tar.gz
   version: master
-status:
-  reposCache:
-  - localPath: '".cache/manifests/kubeflow-manifests-master"'
-    name: manifests

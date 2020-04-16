@@ -1,7 +1,7 @@
 import os
 
 # Enter your private Docker registry 
-private_registry = 
+private_registry = "enter_url_here"
 
 original_image = [
     "argoproj/argoui:v2.3.0",

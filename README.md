@@ -67,10 +67,63 @@ Easily deploy Kubeflow v1.0.1 on existing Kubernetes clusters with 1 command.
     export CONFIG_FILE=${KF_DIR}/kfctl_k8s_istio.v1.0.1.yaml
     kfctl apply -V -f ${CONFIG_FILE}
     ```
-    
 ## Deleting Kubeflow
 
 ```
 cd ${KF_DIR}
+kfctl delete -f ${CONFIG_FILE}
+```
+
+
+
+## Multi-user, auth-enabled Kubeflow On-Premise Air-Gapped Deployment
+
+### How to run
+
+#### While connected to the Internet
+
+1. Clone(download) this repository to your `${HOME}` directory
+
+    ```
+    git clone https://github.com/sachua/kubeflow-easy-deploy.git
+    ```
+    
+2. Run the included python code, following the instructions in the code comments, to pull the Docker images from public Docker registries and tagging them to your private Docker registry
+
+    ```
+    cd kubeflow-air-gapped-dex
+    python save_images.py
+    ```
+    
+#### While connected to your on-premise air-gapped Kubernetes cluster
+
+3. Run the included python code, following the instructions in the code comments, to push the Docker images to your private Docker registry
+
+    ```
+    python save_images.py
+    ```
+    
+4. Search and replace `$(PRIVATE_REGISTRY)` in the YAML files in the kustomize folder to your private Docker registry's URL
+
+5. Replace ${HOME} in kfctl_istio_dex.v1.0.1.yaml repos uri to your `${HOME}` directory
+
+6. Deploy Kubeflow
+
+    ```
+    export KF_NAME=kubeflow-air-gapped-dex
+    export BASE_DIR=${HOME}/kubeflow-easy-deploy
+    export KF_DIR=${BASE_DIR}/${KF_NAME}
+    export PATH=$PATH:"${BASE_DIR}"
+    export CONFIG_FILE=${KF_DIR}/kfctl_istio_dex.v1.0.1.yaml
+    export ISTIO_CONFIG=${KF_DIR}/istio-manifest.yaml
+    kubectl apply -f ${ISTIO_CONFIG}
+    kfctl apply -V -f ${CONFIG_FILE}
+    ```
+
+## Deleting multi-user, auth-enabled Kubeflow
+
+```
+cd ${KF_DIR}
+kubectl delete -f ${ISTIO_CONFIG}
 kfctl delete -f ${CONFIG_FILE}
 ```

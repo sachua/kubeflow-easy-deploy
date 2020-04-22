@@ -1,7 +1,6 @@
 apiVersion: kfdef.apps.kubeflow.org/v1
 kind: KfDef
 metadata:
-  clusterName: docker-desktop
   creationTimestamp: null
   name: kubeflow-easy-deploy
   namespace: kubeflow

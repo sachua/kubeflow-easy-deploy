@@ -60,7 +60,7 @@ Easily deploy Kubeflow v1.0.2 on existing Kubernetes clusters with 1 command.
     export BASE_DIR=${HOME}
     export KF_DIR=${BASE_DIR}/${KF_NAME}
     cd ${KF_DIR}
-    export PATH=$PATH:"${BASE_DIR}"
+    export PATH=$PATH:"${KF_DIR}"
     ```
 
     1. Basic, no-auth Kubeflow

@@ -1,0 +1,27 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- istio-install.yaml
+namespace: kubeflow
+images:
+- name: ${PRIVATE_REGISTRY}/docker.io/istio/galley
+  newName: ${PRIVATE_REGISTRY}/docker.io/istio/galley
+  newTag: 1.4.3
+- name: ${PRIVATE_REGISTRY}/docker.io/istio/proxyv2
+  newName: ${PRIVATE_REGISTRY}/docker.io/istio/proxyv2
+  newTag: 1.4.3
+- name: ${PRIVATE_REGISTRY}/docker.io/istio/mixer
+  newName: ${PRIVATE_REGISTRY}/docker.io/istio/mixer
+  newTag: 1.4.3
+- name: ${PRIVATE_REGISTRY}/docker.io/istio/pilot
+  newName: ${PRIVATE_REGISTRY}/docker.io/istio/pilot
+  newTag: 1.4.3
+- name: ${PRIVATE_REGISTRY}/docker.io/prom/prometheus
+  newName: ${PRIVATE_REGISTRY}/docker.io/prom/prometheus
+  newTag: v2.12.0
+- name: ${PRIVATE_REGISTRY}/docker.io/istio/citadel
+  newName: ${PRIVATE_REGISTRY}/docker.io/istio/citadel
+  newTag: 1.4.3
+- name: ${PRIVATE_REGISTRY}/docker.io/istio/sidecar_injector
+  newName: ${PRIVATE_REGISTRY}/docker.io/istio/sidecar_injector
+  newTag: 1.4.3

@@ -59,6 +59,7 @@ Easily deploy Kubeflow v1.0.2 on existing Kubernetes clusters with 1 command.
     export KF_NAME=kubeflow-easy-deploy
     export BASE_DIR=${HOME}
     export KF_DIR=${BASE_DIR}/${KF_NAME}
+    cd ${KF_DIR}
     export PATH=$PATH:"${BASE_DIR}"
     ```
 

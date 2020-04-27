@@ -52,10 +52,8 @@ Easily deploy Kubeflow v1.0.2 on existing Kubernetes clusters with 1 command.
     ```bash
     sh $HOME/kubeflow-easy-deploy/push_images.sh
     ```
-    
-4. Replace ${HOME} in kfctl_k8s_istio.v1.0.2.yaml repos uri to your `${HOME}` directory
 
-5. Choose and deploy the type of Kubeflow deployment you want:
+4. Choose and deploy the type of Kubeflow deployment you want:
 
     1. Basic, no-auth Kubeflow
 

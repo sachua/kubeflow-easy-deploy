@@ -21,8 +21,9 @@ Easily deploy Kubeflow v1.0.1 on existing Kubernetes clusters with 1 command.
     export BASE_DIR=${HOME}
     export KF_DIR=${BASE_DIR}/${KF_NAME}
     cd ${KF_DIR}
+    wget https://raw.githubusercontent.com/sachua/kubeflow-manifests/master/kfdef/kfctl_k8s_istio.v1.0.2.yaml
     export PATH=$PATH:"${KF_DIR}"
-    export CONFIG_FILE=${KF_DIR}/kfctl_k8s_istio.v1.0.1.yaml
+    export CONFIG_FILE=${KF_DIR}/kfctl_k8s_istio.v1.0.2.yaml
     kfctl apply -V -f ${CONFIG_FILE}
     ```
 
@@ -38,87 +39,56 @@ Easily deploy Kubeflow v1.0.1 on existing Kubernetes clusters with 1 command.
     git clone https://github.com/sachua/kubeflow-easy-deploy.git
     ```
     
-2. Run the included python code, following the instructions in the code comments, to pull the Docker images from public Docker registries and tagging them to your private Docker registry
+2. Run the shell script to pull the Docker images from public Docker registries
 
     ```bash
-    cd kubeflow-air-gapped
-    python save_images.py
+    sh $HOME/kubeflow-easy-deploy/pull_images.sh
     ```
     
 #### While connected to your on-premise air-gapped Kubernetes cluster
 
-3. Run the included python code, following the instructions in the code comments, to push the Docker images to your private Docker registry
+3. Run the shell script to tag and push the Docker images to your private Docker registry
 
     ```bash
-    python save_images.py
+    sh $HOME/kubeflow-easy-deploy/push_images.sh
     ```
     
-4. Search and replace `$(PRIVATE_REGISTRY)` in the YAML files to your private Docker registry's URL
+4. Replace ${HOME} in kfctl_k8s_istio.v1.0.2.yaml repos uri to your `${HOME}` directory
 
-5. Replace ${HOME} in kfctl_k8s_istio.v1.0.1.yaml repos uri to your `${HOME}` directory
+5. Choose and deploy the type of Kubeflow deployment you want:
 
-6. Deploy Kubeflow
+    1. Basic, no-auth Kubeflow
 
-    ```bash
-    export KF_NAME=kubeflow-air-gapped
-    export BASE_DIR=${HOME}/kubeflow-easy-deploy
-    export KF_DIR=${BASE_DIR}/${KF_NAME}
-    export PATH=$PATH:"${BASE_DIR}"
-    export CONFIG_FILE=${KF_DIR}/kfctl_k8s_istio.v1.0.1.yaml
-    kfctl apply -V -f ${CONFIG_FILE}
-    ```
-## Deleting Kubeflow
+        ```bash
+        export KF_NAME=kubeflow-easy-deploy
+        export BASE_DIR=${HOME}
+        export KF_DIR=${BASE_DIR}/${KF_NAME}
+        export PATH=$PATH:"${BASE_DIR}"
+        export CONFIG_FILE=${KF_DIR}/kfctl_k8s_istio.v1.0.2.yaml
+        kfctl apply -V -f ${CONFIG_FILE}
+        ```
+    2. Multi-user, auth-enabled Kubeflow
 
-```bash
-cd ${KF_DIR}
-kfctl delete -f ${CONFIG_FILE}
-```
+        ```bash
+        export KF_NAME=kubeflow-easy-deploy
+        export BASE_DIR=${HOME}
+        export KF_DIR=${BASE_DIR}/${KF_NAME}
+        export PATH=$PATH:"${BASE_DIR}"
+        export CONFIG_FILE=${KF_DIR}/kfctl_istio_dex.v1.0.2.yaml
+        kfctl apply -V -f ${CONFIG_FILE}
+        ```
+    3. Multi-user, auth-enabled Kubeflow (Try this if 2nd option does not work)
 
+        ```bash
+        export KF_NAME=kubeflow-easy-deploy
+        export BASE_DIR=${HOME}
+        export KF_DIR=${BASE_DIR}/${KF_NAME}
+        export PATH=$PATH:"${BASE_DIR}"
+        export CONFIG_FILE=${KF_DIR}/kfctl_istio_nosds_dex.v1.0.2.yaml
+        kfctl apply -V -f ${CONFIG_FILE}
+        ```
 
-
-## Multi-user, auth-enabled Kubeflow On-Premise Air-Gapped Deployment
-
-### How to run
-
-#### While connected to the Internet
-
-1. Clone(download) this repository to your `${HOME}` directory
-
-    ```bash
-    git clone https://github.com/sachua/kubeflow-easy-deploy.git
-    ```
-    
-2. Run the included python code, following the instructions in the code comments, to pull the Docker images from public Docker registries and tagging them to your private Docker registry
-
-    ```bash
-    cd kubeflow-air-gapped-dex
-    python save_images.py
-    ```
-    
-#### While connected to your on-premise air-gapped Kubernetes cluster
-
-3. Run the included python code, following the instructions in the code comments, to push the Docker images to your private Docker registry
-
-    ```bash
-    python save_images.py
-    ```
-    
-4. Search and replace `$(PRIVATE_REGISTRY)` in the YAML files to your private Docker registry's URL
-
-5. Replace ${HOME} in kfctl_istio_dex.v1.0.1.yaml repos uri to your `${HOME}` directory
-
-6. Deploy Kubeflow
-
-    ```bash
-    export KF_NAME=kubeflow-air-gapped-dex
-    export BASE_DIR=${HOME}/kubeflow-easy-deploy
-    export KF_DIR=${BASE_DIR}/${KF_NAME}
-    export PATH=$PATH:"${BASE_DIR}"
-    export CONFIG_FILE=${KF_DIR}/kfctl_istio_dex.v1.0.1.yaml
-    export ISTIO_CONFIG=${KF_DIR}/istio-manifest.yaml
-    kubectl apply -f ${ISTIO_CONFIG}
-    kfctl apply -V -f ${CONFIG_FILE}
-    ```
+## Multi-user, auth-enabled Kubeflow configuration
 
 ### Basic authentication
 
@@ -150,10 +120,9 @@ kfctl delete -f ${CONFIG_FILE}
 
 Refer to [LDAP](LDAP/) folder to set up an LDAP database and use it with Dex.
 
-## Deleting multi-user, auth-enabled Kubeflow
+## Deleting Kubeflow
 
 ```bash
 cd ${KF_DIR}
-kubectl delete -f ${ISTIO_CONFIG}
 kfctl delete -f ${CONFIG_FILE}
 ```

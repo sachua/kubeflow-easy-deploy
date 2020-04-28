@@ -42,7 +42,7 @@ Easily deploy Kubeflow v1.0.2 on existing Kubernetes clusters with 1 command.
 2. Run the shell script to pull the Docker images from public Docker registries
 
     ```bash
-    sh $HOME/kubeflow-easy-deploy/pull_images.sh
+    bash $HOME/kubeflow-easy-deploy/pull_images.sh
     ```
     
 #### While connected to your on-premise air-gapped Kubernetes cluster
@@ -50,7 +50,7 @@ Easily deploy Kubeflow v1.0.2 on existing Kubernetes clusters with 1 command.
 3. Run the shell script to tag and push the Docker images to your private Docker registry
 
     ```bash
-    sh $HOME/kubeflow-easy-deploy/push_images.sh
+    bash $HOME/kubeflow-easy-deploy/push_images.sh
     ```
 
 4. Choose and deploy the type of Kubeflow deployment you want:

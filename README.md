@@ -6,26 +6,19 @@ Easily deploy Kubeflow v1.0.2 on existing Kubernetes clusters with 1 command.
 
 ### How to run
 
-1. Clone(download) this repository to your `${HOME}` directory
+Copy and paste the commands:
 
-    ```bash
-    git clone https://github.com/sachua/kubeflow-easy-deploy.git
-    ```
-    
-    Note: you can delete the `kubeflow-air-gapped` folder.
-
-2. Deploy Kubeflow
-
-    ```bash
-    export KF_NAME=kubeflow-easy-deploy
-    export BASE_DIR=${HOME}
-    export KF_DIR=${BASE_DIR}/${KF_NAME}
-    cd ${KF_DIR}
-    wget https://raw.githubusercontent.com/sachua/kubeflow-manifests/master/kfdef/kfctl_k8s_istio.v1.0.2.yaml
-    export PATH=$PATH:"${KF_DIR}"
-    export CONFIG_FILE=${KF_DIR}/kfctl_k8s_istio.v1.0.2.yaml
-    kfctl apply -V -f ${CONFIG_FILE}
-    ```
+```bash
+export KF_NAME=kubeflow-easy-deploy
+export BASE_DIR=${HOME}
+export KF_DIR=${BASE_DIR}/${KF_NAME}
+mkdir -p ${KF_DIR}
+cd ${KF_DIR}
+wget https://raw.githubusercontent.com/sachua/kubeflow-manifests/master/kfdef/kfctl_k8s_istio.v1.0.2.yaml
+export PATH=$PATH:"${KF_DIR}"
+export CONFIG_FILE=${KF_DIR}/kfctl_k8s_istio.v1.0.2.yaml
+kfctl apply -V -f ${CONFIG_FILE}
+```
 
 ## Kubeflow On-Premise Air-Gapped Deployment
 

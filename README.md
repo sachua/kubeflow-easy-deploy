@@ -14,7 +14,8 @@ export BASE_DIR=${HOME}
 export KF_DIR=${BASE_DIR}/${KF_NAME}
 mkdir -p ${KF_DIR}
 cd ${KF_DIR}
-wget https://github.com/sachua/kubeflow-easy-deploy/raw/master/kfctl
+wget https://github.com/sachua/kubeflow-easy-deploy/raw/master/kfctl.tar.gz
+tar -xvf kfctl.tar.gz
 wget https://raw.githubusercontent.com/sachua/kubeflow-manifests/master/kfdef/kfctl_k8s_istio.v1.0.2.yaml
 export PATH=$PATH:"${KF_DIR}"
 export CONFIG_FILE=${KF_DIR}/kfctl_k8s_istio.v1.0.2.yaml
@@ -54,6 +55,7 @@ kfctl apply -V -f ${CONFIG_FILE}
     export BASE_DIR=${HOME}
     export KF_DIR=${BASE_DIR}/${KF_NAME}
     cd ${KF_DIR}
+    tar -xvf kfctl.tar.gz
     export PATH=$PATH:"${KF_DIR}"
     ```
 

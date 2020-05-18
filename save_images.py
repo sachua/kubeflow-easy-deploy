@@ -6,6 +6,7 @@ private_registry = "enter_url_here"
 original_image = [
     "argoproj/argoui:v2.3.0",
     "argoproj/workflow-controller:v2.3.0",
+    "argoproj/argoexec:v2.3.0",
     "busybox",
     "docker.io/istio/citadel:1.1.6",
     "docker.io/istio/citadel:1.4.3",
